@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accès Administrateur | KRONOS NUTRITION</title>
+  <meta name="description" content="Portail de gestion back-office de la boutique KRONOS NUTRITION.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <style>
+    body {
+      background-color: #080808;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .login-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--admin-bg-card);
+      border: 1px solid var(--admin-border-subtle);
+      border-radius: var(--admin-radius-md);
+      padding: 36px 32px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header style="padding: 20px 0; border-bottom: 1px solid var(--border-subtle); background: var(--bg-dark);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">NF</div>
+        <div>
+          <span>NUTRI FORGE</span>
+          <span class="sub">FORGE 10</span>
+        </div>
+      </a>
+      <a href="index.html" class="btn btn-outline btn-sm">← Retour au Site Public</a>
+    </div>
+  </header>
+
+  <!-- Login Area -->
+  <div class="login-container">
+    <div class="login-card">
+      <div style="text-align: center; margin-bottom: 28px;">
+        <div style="width: 50px; height: 50px; background: var(--accent-white); color: var(--text-inverse); border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.4rem; margin-bottom: 14px;">
+          ⚙
+        </div>
+        <h1 style="font-size: 1.4rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Espace Propriétaire</h1>
+        <p style="color: var(--admin-text-muted); font-size: 0.85rem;">Connexion au tableau de bord d'administration</p>
+      </div>
+
+      <div id="login-error-alert" class="admin-alert admin-alert-danger" style="display: none;"></div>
+
+      <form id="admin-login-form">
+        <div class="admin-form-group">
+          <label class="admin-form-label" for="login-email">Identifiant ou Email Admin</label>
+          <input type="text" id="login-email" class="admin-input" placeholder="••••••••••••" required>
+        </div>
+
+        <div class="admin-form-group" style="margin-bottom: 24px;">
+          <label class="admin-form-label" for="login-password">Mot de passe</label>
+          <input type="password" id="login-password" class="admin-input" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="padding: 14px;">
+          SE CONNECTER AU DASHBOARD →
+        </button>
+      </form>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <span style="font-size: 0.75rem; color: var(--admin-text-muted);">
+          🔒 Accès réservé à la direction et aux gestionnaires KRONOS.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Propriétaire | KRONOS NUTRITION</title>
+  <meta name="description" content="Panneau d'administration complet KRONOS NUTRITION : gestion des produits, stocks, commandes, clients et statistiques.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body id="admin-app-root">
+
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <a href="index.html" class="brand-logo" style="text-decoration: none;">
+          <div class="brand-logo-icon">NF</div>
+          <div>
+            <span>NUTRI FORGE</span>
+            <span class="sub">FORGE 10</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-title">PRINCIPAL</div>
+        <a href="#" class="sidebar-link active" data-tab="tab-dashboard">
+          <span class="sidebar-icon">📊</span>
+          <span>Vue d'Ensemble</span>
+        </a>
+
+        <div class="sidebar-section-title">CATALOGUE & STOCK</div>
+        <a href="#" class="sidebar-link" data-tab="tab-products">
+          <span class="sidebar-icon">📦</span>
+          <span>Tous les Produits</span>
+        </a>
+        <a href="#" class="sidebar-link" data-tab="tab-add-product">
+          <span class="sidebar-icon">➕</span>
+          <span>Ajouter un Produit</span>
+        </a>
+        <a href="#" class="sidebar-link" data-tab="tab-stock">
+          <span class="sidebar-icon">⚠️</span>
+          <span>Gestion des Stocks</span>
+        </a>
+        <a href="#" class="sidebar-link" data-tab="tab-promotions">
+          <span class="sidebar-icon">🏷️</span>
+          <span>Promotions & Offres</span>
+        </a>
+
+        <div class="sidebar-section-title">VENTES & CLIENTS</div>
+        <a href="#" class="sidebar-link" data-tab="tab-orders">
+          <span class="sidebar-icon">🛒</span>
+          <span>Commandes</span>
+        </a>
+        <a href="#" class="sidebar-link" data-tab="tab-customers">
+          <span class="sidebar-icon">👥</span>
+          <span>Répertoire Clients</span>
+        </a>
+
+        <div class="sidebar-section-title">BOUTIQUE</div>
+        <a href="#" class="sidebar-link" data-tab="tab-settings">
+          <span class="sidebar-icon">⚙️</span>
+          <span>Paramètres Boutique</span>
+        </a>
+        <a href="index.html" class="sidebar-link" target="_blank">
+          <span class="sidebar-icon">🌐</span>
+          <span>Voir le Site Public ↗</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="font-size: 0.78rem; font-weight: 700; color: var(--admin-accent-white); margin-bottom: 2px;">Directeur KRONOS</div>
+        <div style="font-size: 0.7rem; color: var(--admin-text-muted); margin-bottom: 12px;">admin@kronos.dz</div>
+        <button class="btn btn-secondary btn-sm btn-block" onclick="logoutAdmin()">Déconnexion 🚪</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <div class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button id="admin-menu-toggle" class="btn btn-secondary btn-sm" style="display: none; padding: 6px 10px;" aria-label="Toggle Menu">☰</button>
+          <h2 id="topbar-title" class="topbar-title">Vue d'Ensemble</h2>
+        </div>
+
+        <div class="topbar-user-area">
+          <a href="products.html" target="_blank" class="btn btn-outline btn-sm" style="font-size: 0.75rem;">Voir Boutique</a>
+          <span class="admin-badge-pill">Connecté en Super Admin</span>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Body -->
+      <main class="admin-content" id="admin-dynamic-content">
+        <!-- Rendered dynamically by js/admin.js based on active tab -->
+      </main>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 900px) {
+      #admin-menu-toggle {
+        display: inline-block !important;
+      }
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

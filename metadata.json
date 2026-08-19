@@ -1,0 +1,6 @@
+{
+  "name": "KRONOS NUTRITION - Sports Nutrition & Performance",
+  "description": "Boutique e-commerce haut de gamme de nutrition sportive (Whey, Créatine, Pre-Workout, Gainer, Vitamines) avec espace client et dashboard d'administration complet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
